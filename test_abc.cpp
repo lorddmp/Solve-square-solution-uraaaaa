@@ -11,6 +11,12 @@ void program_test(struct type_str_test str_test)
         printf("Error, wrong answer: x1 = %g (should be %g), x2 = %g (should be %g), n_roots = %d (should be %d)\n",
                str_test.hahaha.x1, str_test.ans_x1, str_test.hahaha.x2, str_test.ans_x2, n_root, str_test.n_roots_ans);
     }
+    else
+        {
+        txSetConsoleAttr(FOREGROUND_GREEN);
+        printf ("TEST IS OK\n");
+        txSetConsoleAttr(FOREGROUND_LIGHTGRAY);
+        }
 }
 
 //-----------------------------------------------------------------------------j
@@ -19,7 +25,7 @@ void find_errors()
 {
     struct type_str_test str_test = {};
 
-    FILE *fp = fopen("test_input.txt", "r");
+    FILE *fp = fopen("C:\\Users\\Дима\\Desktop\\C\\abc\\test_input.txt", "r");
 
     my_assert (fp == NULL);
 

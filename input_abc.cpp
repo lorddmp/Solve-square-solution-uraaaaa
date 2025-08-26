@@ -2,19 +2,35 @@
 
 void scan(double *scan_num)
 {
+    bool ne_norm_koef = true;
     my_assert(scan_num == NULL);
 
     txSetConsoleAttr(FOREGROUND_YELLOW);
 
-    while (scanf("%lg", scan_num) != 1)
+    while(ne_norm_koef)
+    {
+        if (scanf("%lg", scan_num) != 1)
         {
-            clean_buff();
-
             txSetConsoleAttr(FOREGROUND_RED);
-            printf( "Error, please enter any NUMBER ");
+            printf( "Error, please enter any NUMBER\n");
+            printf( "Try again: ");
             txSetConsoleAttr(FOREGROUND_YELLOW);
+            clean_buff();
         }
-    clean_buff();
+
+        else if ( getchar() != '\n')
+        {
+            txSetConsoleAttr(FOREGROUND_RED);
+            printf( "Error, please enter any NUMBER\n");
+            printf( "Try again: ");
+            txSetConsoleAttr(FOREGROUND_YELLOW);
+            clean_buff();
+        }
+        else
+            {
+            ne_norm_koef = false;
+            }
+    }
 }
 
 //-----------------------------------------------------------------------------
