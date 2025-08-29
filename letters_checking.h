@@ -1,9 +1,9 @@
 #ifndef LETTERS_CHECKING
 #define LETTERS_CHECKING
 
-#include <TXLib.h>
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "solve_eq.h"
 #include "test_abc.h"
 #include "structures.h"

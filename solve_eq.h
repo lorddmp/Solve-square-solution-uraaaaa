@@ -1,9 +1,9 @@
 #ifndef SOLVE_EQ
 #define SOLVE_EQ
 
-#include <TXLib.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "solve_eq.h"
 #include "test_abc.h"
 #include "structures.h"
@@ -24,7 +24,5 @@ bool is_zero(double maybe_zero);
 int disc_zero(struct mas_upd *abc_str);
 
 int disc_one(double disc, struct mas_upd *abc_str);
-
-void clean_buff();
 
 #endif
